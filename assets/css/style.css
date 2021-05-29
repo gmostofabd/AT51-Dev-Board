@@ -25,10 +25,10 @@ p{
 
 
   #slide_cont{
-    width:730px; height:395px; 
+    width:760px; height:430px; 
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 20px;
     justify-content: center; 
     border-radius: 5px;
@@ -38,7 +38,7 @@ p{
 
 
   #detail_cont{
-    width:750px; height:800px; 
+    width:760px; height:2000px; 
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -51,25 +51,21 @@ p{
 
 
 
-
-
-
-
-
-
-
-
-
   * {box-sizing: border-box;}
   .mySlides {display: none;}
       
       /* Slideshow container */
   .slideshow-container {
-        max-width: 730px;
+        max-width: 720px;
         position: relative;
         margin-left: auto;
         margin-right: auto;
-        background-color: rgb(223, 247, 197);
+        margin-bottom: 10px;
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 2px;
+        border: 2px solid #9c9a9c;
+        background-color: rgb(227, 231, 222);
     }
 
     /* Caption text */
@@ -95,7 +91,7 @@ p{
       /* The dots/bullets/indicators */
   .dot {
         height: 15px; width: 15px;
-        margin: 0 2px;
+        margin: 0 5px;
         background-color: #bbb;
         border-radius: 50%;
         display: inline-block;
