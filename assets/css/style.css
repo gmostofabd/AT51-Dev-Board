@@ -225,6 +225,7 @@ blockquote {
 .box_50 {width: 50%; height: auto;}
 .box_70 {width: 70%; height: auto;}
 .box_80 {width: 80%; height: auto;}
+.box_90 {width: 90%; height: auto;}
 
 .inside {
     list-style-position: inside;
