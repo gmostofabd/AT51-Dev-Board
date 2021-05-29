@@ -192,6 +192,7 @@ blockquote {
     width: 178px; height: 200px;
     border-radius: 5px;
     background-color: #e4e1e1;
+    margin-top: 20px;
     padding: 5px;
     margin-bottom: 10px;
   }
