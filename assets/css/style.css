@@ -46,7 +46,7 @@ p{
     justify-content: center; 
     border-radius: 5px;
     border: 1px solid #d4d2d4;
-    background-color:rgb(240, 240, 240);
+    background-color:white;
   }
 
 
@@ -189,7 +189,7 @@ blockquote {
   }
 
 .vdo_lst_cont {
-    width: 178px; height: 200px;
+    width: 178px; height: 210px;
     border-radius: 5px;
     background-color: #e4e1e1;
     margin-top: 20px;
