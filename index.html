@@ -5,244 +5,196 @@
 <head>
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="shortcut icon" href="https://github.com/gmostofabd/melab-store/blob/main/Images/melab-bd_logo.jpg?raw=true" type="image/x-icon">
-  <script src="assets/footer.js" type="text/javascript" defer></script>
 
-    	<meta charset="utf-8">
+  <script src="assets/sharedfooter.js" type="text/javascript" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('#sidebar1').load("assets/sidebar1.html");
+    });
+  </script>
+
+  <meta charset="utf-8">
 	<meta name="Keywords" content="Microcontroller,8051,Assembly,Programming,Code,Proteus">
 
-	<!--Facebook Open graph Mete Tags-->
-	<meta property="og:url"                content="https://gmostofabd.github.io/8051-Dev-Tools/" />
+  <!--Facebook Open graph Mete Tags-->
+	<meta property="og:url"                content="https://gmostofabd.github.io/8051-LED/" />
 	<meta property="og:type"               content="article" />
-	<meta property="og:title"              content="8051 Development Tools" />
-	<meta property="og:description"        content="8051 Devlopment Tools and Environments." />
-	<meta property="og:image"              content="assets/images/Dev_Brd_1.png" />
+	<meta property="og:title"              content="Exp-01 : 8051 Simple I/O Interface" />
+	<meta property="og:description"        content="8051 Microcontroller statr-up experiment in minutes" />
+	<meta property="og:image"              content="assets/images/LED_8051_Ckt.png" />
 	
-	
-	<title>AT51 Demo Board</title>
+	<title>8051 Simple I/O Programming</title>
 </head>
 
-
+	
 <body  bgcolor=white>
 
 	<div id="header_common"><img src="https://github.com/gmostofabd/melab-store/blob/main/Images/8051_Tutorial_Banner.png?raw=true" alt="common_banner"></div>
-	<div id="topic_container"><h2>8051 Microcontroller Development Board - AT51</h2></div>
+	<div id="topic_container"><h2>Exp. 01 : LED Interfacing with 8051</h2></div>
 
 
-  <table  align = center width=1000 height=1000  bgcolor= white>
+  <table align = center width=1000 height=1000  bgcolor= white>
 	  <tr>
-
-
-	  <td width=800 align=center valign=top bgcolor= white>
+	  <td width=800 align=center valign=top bgcolor=white>
 		
-      <div id="slide_cont">
+		<h3>Introduction:</h3>
+          <blockquote>
+		  <p>
+            We are very familiar with “Hello world!” basic program code in the initial 
+            stage of any programming language to learn some basic things. Similarly to 
+            get started with any Microcontroller, LED interfacing is a basic and simplest 
+            experiment to see a physical output.
+            
+            <br><br>Each Microcontroller is different in its architecture, but the 
+            interfacing concepts are almost same for all. One can understand the concept 
+            of input-output configurations of the general-purpose I/O port in a 
+            microcontroller with the simple LED blinking project. This tutorial will 
+            explain the method of interfacing LEDs with 8051 microcontrollers.
+	      </p>
+          </blockquote>
 
-
-        <div class="slideshow-container">
-
-          <div class="mySlides fade">
-            <div class="numbertext">1 / 4</div>
-            <img src="assets/images/AT-51A.png" >
-            <div class="text">Connect</div>
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">2 / 4</div>
-            <img src="assets/images/AT-51_Kit_Includes.png" >
-            <div class="text">Programm</div>
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">3 / 4</div>
-            <img src="assets/images/AT-51_Accessories.png" >
-            <div class="text">return</div>
-          </div>
-
-          
-          <div class="mySlides fade">
-              <div class="numbertext">4 / 4</div>
-              <img src="assets/images/AT51_PCB_3D.png" >
-              <div class="text">Enjoy</div>
-          </div>
-
-        </div>
-          
-        <div style="text-align:center">
-            <span class="dot"></span> 
-            <span class="dot"></span> 
-            <span class="dot"></span> 
-            <span class="dot"></span> 
-        </div>
-      </div>   
-
-      <script src="assets/myScript.js"></script>
-
-
-
-      <div id="detail_cont">
-
-        <h3>ATMEL PRO Development Kit</h3>
-        <blockquote>
-          <p>
-            The Explore ATMEL PRO Kit comes with all the things required, not just for this experiment 
-            but for the entire series. The base board is fully open, no peripheral is directly connected 
-            to the MCU breakout board. You may connect any peripheral to any port/pin you wish. The kit 
-            is fully open source, you may use the schematics, the design files and all of the source 
-            code and build something cool on your own.
-    
-            <br><br>ATMEL PRO is simple but powerful board which uses the MCU AT89S52 from Atmel. 
-            With its variety of interfaces this board is suitable for different embedded systems 
-            applications.
-    
-            <br><br>The ATMEL PRO evaluation board supports all operating modes of the 8051 and 
-            251 microcontrollers and lets you become familiar with the different modes of these devices.
-            </p>
-    
-        </blockquote>
-
-        <div class="box_90"><img src="assets/images/Dev_Brd_1.png"/></div>
-
-        <h3>Board Features</h3>
-
-
-        <ul class="ul_gen">
-          <li>DIP 40 Pin ZIF (Zero Insertion Force) Socket. For Easy Insert/Remove of IC.</li>
-          <li>8051 Development Board Support AT89S51, AT89S52, P89V51RD2, etc. 40-Pin DIP Chip.</li>
-          <li>USB Programmer can be used for both 8051 and AVR ICs.</li>
-          <li>On-Board 5 mm Power Plug-in DC Jack</li>
-          <li>On-Board 5V and 3.3V regulator circuit.</li>
-          <li>On-Board Power ON-OFF switch and power indication RED LED.</li>
-          <li>On-Board 4 Input User Switches (pulled up internally).</li>
-          <li>On-board Quartz Crystal 11.05892 MHz</li>
-          <li>Port Extensions for all PORT with Detailed Pin Labeling for Easy Identification of Pin</li>
-          <li>External Pull-Up resistors for Port 0</li>
-          <li>On-board Reset button</li>
-          <li>Canbe operated from USB</li>
-          <li>Dimensions: 120x38 mm (4.7x1.5")</li>
-        </ul>
-
-        <blockquote>
-          <p>The story of the Kit does not end here. The kit ships with all the additional stuff mentioned below to get you started; 
-            kickstart your embedded development. What are you waiting for?
-          </p>
-        </blockquote>
-
-
-
-        <h3>Peripherals Built-in</h3>
-
-
-        <ul class="ul_gen">
-          <li>16x2 LCD</li>
-          <li>8x8 LED Dot Matrix</li>
-          <li>On Board USB Programmer </li>
-          <li>DC +5V, +3.3V GND</li>
-          <li>LDR Circuit</li>
-          <li>Buzzer Circuit</li>
-          <li>4x7Segment Matrix Display Circuit.</li>
-          <li>RTC DS1307 Circuit with battery.</li>
-          <li>EEPROM 24C02 Circuit</li>
-          <li>ADC0804 Circuit</li>
-          <li>RF Transmiter and Receiver Circuit.</li>
-          <li>IR Receiver Circuit</li>
-          <li>LM35 Temp. Sensor Circuit</li>
-          <li>DS18B20 Temp. Sensor Circuit</li>
-          <li>Potentiometer Circuit</li>
-          <li>Relay Circuit</li>
-          <li>L293D H-Bridge motor Controller Circuit.</li>
-          <li>ULN2803 Stepper Driver Circuit.</li>
-          <li>74HC595 Shift Register Circuit.</li>
-          <li>28PIN DIP Socket to support PIC or ATMEGA MCU</li>
-          <li>Bread Board for extension circuits.</li>
-        </ul>
-
-
-        <h3>Package Content</h3>
-        <ul class="ul_gen">
-          <li>ATMEL PRO Evaluation Board.</li>
-          <li>ATMEL PRO Evaluation Board User’s Guide (this manual),</li>
-          <li>Power Adapter (12v 1a External)</li>
-          <li>Motor (DC and Stepper)</li>
-          <li>Keypad Matrix (Membrane Type)</li>
-          <li>Connectors (M2M, M2F, F2F)</li>
-          <li>USB Programming Cable</li>
-          <li>Softcopy CD( MIDE-51, PROTEUS, PICKIT2, Data sheets and Notes.).</li>
-        </ul>
-
-        <h3>BOARD USE REQUIREMENTS:</h3>
-        <blockquote>
-          <p>
-            If you connect it with your pc it is cappable to operate all of its
-            builin peripheral except the motors only.
-          </p>
-        </blockquote>
-
-      </div>
+        <h3>Hardware Discussion : Light Emitting Diode (LED)</h3>
 	
+            <div class="box_70"><img src="assets/images/led_looks.jpg"/></div>
+            <div class="capt_cont">Fig: Some of available LCD modules</div>
+
+
+      <h3>LED Features :</h3>
+            
+      <ul>
+          <li>Normal LEDs consume very Low Power while <strong>High Power LEDs</strong>are very bright 
+            and are often used in Flashlights, Automobile Headlamps, Spotlights, etc.</li>
+          <li>Fast Switching</li>
+          <li>Physically Robust</li>
+          <li>Long Lasting</li> 
+          <li>Available in colors, sizes and shapes.</li>
+          <li>Lower price.</li>
+      </ul>
+        <br>
+      <h3>LED Basics :</h3>
+
+        <div class="box_80"><img src="assets/images/LED_Config1.png" alt="LCD mdules"></div>
+        <div class="capt_cont">Fig: LED Symbol and Physical Configuration</div>
+
+
+        <h3>How it works?</h3>
+        <blockquote>
+        <p>
+            The symbol of LED is formed by merging the symbol of P-N Junction diode and outward
+             arrows. These outward arrows symbolise the light radiated by the light emitting diode.
+             
+             <br><br>
+        
+             From the above figure we can have a lot of information regarding LED. The longer leg 
+             is Anode and the smaller one is cathode pin. There will be a notch on the surface 
+             indicates cathode side. Another process to determine the anode cathode pin if you see 
+             inside, the cathode plate is larger than the anode plate. The anode cathode pin can 
+             also be identified using a multi-meter or a 5V power supply unit.
+          
+          <br><br>From the chart at right of above figure we can see that each LED has its own 
+          forward voltage drop across the PN junction and this parameter which is determined by 
+          the semiconductor material used, is the forward voltage drop for a specified amount of 
+          forward conduction current, typically for a forward current of 20mA.
+        </p>
+        </blockquote>
+
+
+        <h3>LED Series Resistors:</h3>
+        <blockquote>
+        <p>In most cases LEDs are operated from a low voltage DC supply, with a series resistor, 
+            Rs used to limit the forward current to a safe value from say 5mA for a simple LED 
+            indicator to 30mA or more where a high brightness light output is needed.
+            
+            <br><br>The series resistor value R is calculated by simply using Ohm´s Law, by 
+            knowing the required forward current I of the LED, the supply voltage VS across the 
+            combination and the expected forward voltage drop of the LED, VF at the required 
+            current level, the current limiting resistor is calculated as below:
+        </p>
+        </blockquote>
+
+
+        <h3>LED Series Resistance Calculation</h3>
+
+        <div class="box_ckt_diag"><img src="assets/images/led_res5.png"/></div>
+        <div class="capt_cont">Fig: LED Series Resistance Calculation</div>
+
+
+
+        <h3>Circuit Diagram :</h3>
+        <div class="box_ckt_diag"><img src="assets/images/LED_8051_Ckt.png" alt="ckt_diagram" width="600" height="350"></div>
+        <div class="capt_cont">Fig: LED interfacing (4 bit mode) with 8051</div>
+
+        <h3>Circuit Discussion :</h3>
+
+        <blockquote>
+            <p>Here is the circuit diagram of the AT89S51 interfaced 2 LEDs on two different PORT Pins. 
+                One is connected to PORT-0 at PIN-7 and second one is connected  to PORT2 PIN0 of the 
+                Microcontroller. Both the LEDs are driven through resistors for limiting current.
+                
+                <br><br>The image shown above is directly screen capture from our Proteus simulation.
+                By observing the simulator markers (i.e. red and blue squares expresses logic 1 and 
+                logic 0 accordingly.) When the both LED are ON we can see one of our port pin is 
+                showing high or logic 1 while other one is logic 0. It is happening due to to 
+                connection logic of the LEDs. We have connected the cathode pin of LED1 (D1) to the 
+                microcontroller pin. So, we need to make the corresponding pin low to illuminate the 
+                LED. And for the LED2 (D2) which is vice versa as is its reverse connection configuration.
+
+                <br><br>In this microcontroller, pin source current is limited to 10mA per pin 
+                (please refer datasheet). So even if the resistor is not provided with LED, there will 
+                not be any damage to the LEDs. But in good practice the resistor is always used.
+
+                <br><br>For our case the circuit diagram is as follows. The circuit schematic has drawn 
+                over PROTEUS software. The circuit is nothing but same as figure above except the 
+                mandatory circuit part of a 8051 microcontroller.
+            </p>
+            </blockquote>
+
+
+        <h3>Assembly Program : <a href="https://github.com/gmostofabd/8051-7Segment/blob/main/codes/7seg_1d_8051.asm">led_8051.asm</a></h3>
+        <div class="prog_cont">
+            <embed type="text/html" src="codes/led_blink_8051.asm"  width="500" height="500">
+        </div>
+
+        <h3>Code Discussion:</h3>
+            <blockquote>
+            <p>
+                The code lines are properly commented as and when it is required. Assumed that, the 
+                comments are sufficient to inform you about the corresponding line of instruction. 
+                The delay function at the end creates a nominal delay in blinking the LEDs. The accurate 
+                value of time delay could be calculated with the known value of instruction execution 
+                time but is not done here since it is beyond the scope of this article. Each time when 
+                this function is called in main a delay is generated.
+            </p>
+            </blockquote>
+
+
+
+        <h3>Post Run Discussion:  LED Chaser (Code Optimization)</h3>
+        <blockquote>
+        <p>
+            A problem can be solved in multiple ways having different efficiencies. Beginnersmay skip 
+            the efficiency issues but in good programming practices alternates arealways a thirst of 
+            developers. Below is an example of some ways out for a sameoperation.
+
+          <br><br>Example : Write code that will run 8 LEDs on a port one by one at a predefinedinterval.
+        </p>
+        </blockquote>
 
     </td>
 
-
-      <td valign=top bgcolor= white>
+    <td valign=top>
 		
+
       <div class="vdo_lst_cont">
-        <h3>Lesson Video</h3>
-        <iframe width="170" height="120" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-      </div>
-      <div class="pdf_cont"><h4>Catalog PDF</h4></div>
-
-      <div class="pdf_cont"><h4>VDO Tutorials</h4></div>
-      <div class="pdf_cont"><h4>Experiments</h4></div>
-
-      <div class="pdf_cont"><h4>Projects</h4></div>
-
-
-      <div class="box_this_lesson">
-        <h3>Important Downloads</h3>
-        <ul class="ul_right">
-          <li>Proteus 8.7</li>
-          <li>MIDE-51 IDE</li>
-          <li>AVRDUDES</li>
-        </ul>
+          <h3>Lesson Video</h3>
+          <iframe width="184" height="100"
+          src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
       </div>
 
-
-      <div class="box_this_lesson">
-        <h3>Related Topics:</h3>
-        <ul class="ul_right">
-          <li>ATMEL USB Programmer</li>
-          <li>DIY Lab Powersupply</li>
-        </ul>
-      </div>
-
-
-      <div class="box_this_lesson">
-        <h3>Equipments</h3>
-        <ul class="ul_right">
-            <li>Multimeter</li>
-            <li>Power Supply</li>
-            <li>Oscilloscope</li>
-            <li>Function Generator</li>
-            <li>Logic Level Tester</li>
-        </ul>
-      </div>
-
-
-      <div class="box_this_lesson">
-        <h3>Datasheets</h3>
-        <ul class="ul_right">
-            <li>AT89S52</li>
-            <li>DS1307</li>
-            <li>24C02</li>
-            <li>LCD 1602</li>
-            <li>ULN2003</li>
-            <li>74HC595</li>
-            <li>L293D</li>
-            <li>ADC0804</li>
-            <li>TSOP1748</li>
-            <li></li>
-        </ul>
-      </div>
-
+      <div id="sidebar1"></div>
 
     </td>
 
@@ -251,25 +203,16 @@
          
   </table>
 
+  <table width=1000 height=50 align= center border="1">
+	  <tr>
+			<td>Prev topic: 8051 Development Tools</td>
+			<td>Next topic: Push Button interfacing with 8051</td>
+		</tr>
+  </table>
 
-	<div id="footer_common">
-
-    <div class="prj_footer_cell">
-      <strong>Top Tutorial sites </strong>
-        <ul class="ul_footer">
-          <li id="active"><a href="http://www.melab-bd.com/home.html"><strong>Circuit Today</strong></a></li>
-          <li><a href="http://www.melab-bd.com/about.html"><strong>Radio Electronics</strong></a></li>
-          <li><a href="http://www.melab-bd.com/product.html"><strong>MikroE</strong></a></li>
-         </ul>
-    </div>
-    <script>
-      function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}
-    </script>
-    <a href="http://www.facebook.com/share.php?u=<url>" onclick="return fbs_click()" target="_blank">
-    <img src="ADD_IMAGE_URL_HERE" alt="Share on Facebook" /></a>
-
-  </div>
-  <footer-component></footer-component>    
+	<div id="footer_common"><footer-component></footer-component></div>
+    
+  
 
 </body>
 
